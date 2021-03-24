@@ -6,8 +6,9 @@ import Search from 'flarum/components/Search';
 /* global m */
 
 app.initializers.add('clarkwinkelmann-mobile-search', () => {
-    extend(IndexPage.prototype, 'viewItems', function (items) {
+    extend(IndexPage.prototype, 'sidebarItems', function (items) {
         items.add('search', Search.component({
+            itemClassName: 'App-primaryControl',
             state: app.search,
         }), -100);
     });
